@@ -1,0 +1,97 @@
+@import 'colors';
+@import 'mixins';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.title {
+    font-family: $fontFamily1;
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin: 1.25rem 0 4rem 1.5rem;
+    color: $gray1Color;
+    text-transform: uppercase;
+    @include desktop {
+        margin: 2.5rem 0 7.5rem 4.8125rem;
+    }
+}
+
+main {
+    @include desktop {
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+.image {
+    width: 76vw;
+    margin: 0 12vw 4.853125rem 12vw;
+    @include desktop {
+        width: 37.43vw;
+        margin: 0 8.2vw 0 4.8125rem;
+        align-self: flex-start;
+    }
+
+}
+
+.ctn {
+    display: flex;
+    flex-direction: column;
+    p {
+        font-family: $fontFamily2;
+    }
+    
+    & p:first-of-type  {
+        width: 94vw;
+        font-weight: 700;
+        font-size: 3rem;
+        line-height: 4.4rem;
+        align-self: flex-end;
+        letter-spacing: -1.5px;
+        margin-bottom: 1.875rem;
+        color: $gray1Color;
+        @include desktop {
+            font-size: 4rem;
+            line-height: 5.92375rem;
+            width: 40.67vw;
+            align-self: flex-start;
+            // min-width: 500px;
+            margin-bottom: 2.25rem;
+        }
+    }
+
+    & p:nth-of-type(2) {
+        width: 87.2vw;
+        align-self: center;
+        font-size: 1.125rem;
+        line-height: 1.66625rem;
+        margin-bottom: 4.125rem;
+        color: $gray2Color;
+        @include desktop {
+            width: 23.5rem;
+            align-self: flex-start;
+            margin-bottom: 5.5rem;
+        }
+    }
+
+    .btn {
+        border: none;
+        // width: 13.5rem;
+        align-self: flex-start;
+        background-color: $gray1Color;
+        font-family: $fontFamily2;
+        font-size: .875rem;
+        line-height: 1.295625rem;
+        color: white;
+        text-transform: uppercase;
+        padding: 1.5rem 2.6785rem;
+        margin-left: 1.5rem;
+        letter-spacing: -2px;
+        @include desktop {
+            margin: 0;
+        }
+    }
+}
